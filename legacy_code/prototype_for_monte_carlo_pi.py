@@ -27,14 +27,14 @@ class MonteCarloPiEstimation:
         self.actual_pi = [self.PI] * 100
 
         # window settings
-        self.window = Tk()
-        self.window.config(bg=self.BG_COLOR)
-        self.window.title("Monte Carlo Pi Estimation")
-        self.window.iconbitmap("assets/pi.ico")
-        self.hidden_canvas = HiddenCanvas(self.window)
-        self.visible_canvas = VisibleCanvas(self.window)
-        self.graph_frame = Frame(self.window, bg=self.BG_COLOR)
-        self.pi_label = Label(self.window, text="", bg=self.BG_COLOR, fg=self.FG_COLOR)
+        # self.window = Tk()
+        # self.window.config(bg=self.BG_COLOR)
+        # self.window.title("Monte Carlo Pi Estimation")
+        # self.window.iconbitmap("assets/pi.ico")
+        # self.hidden_canvas = HiddenCanvas(self.window)
+        # self.visible_canvas = VisibleCanvas(self.window)
+        # self.graph_frame = Frame(self.window, bg=self.BG_COLOR)
+        # self.pi_label = Label(self.window, text="", bg=self.BG_COLOR, fg=self.FG_COLOR)
 
         self.show_initial_graph()
 
@@ -46,7 +46,7 @@ class MonteCarloPiEstimation:
                fg=self.FG_COLOR).grid(row=1, column=1, padx=5, pady=5)
 
         self.window.bind(sequence="<space>", func=self.change_simulation_status())
-        self.window.mainloop()
+        # self.window.mainloop()
 
     def change_simulation_status(self):
         # make sure the interrupt variable doesn't stop the simulation
