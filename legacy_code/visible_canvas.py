@@ -6,9 +6,9 @@ class VisibleCanvas(Canvas):
     RECTANGLE_COLOR = ""
     BG_COLOR = "#161618"
 
+    # TODO make the size of the canvas changeable
     def __init__(self, window):
         super().__init__(window, width=420, height=420, bg=self.BG_COLOR)
-        self.grid(row=0, column=0, columnspan=4)
         # bg = self.canvas.create_rectangle(0, 0, 420, 420, fill=self.BG_COLOR)
         self.rectangle = self.create_rectangle(10, 10, 410, 410, fill="blue", width=0)
         self.circle = self.create_oval(10, 10, 410, 410, fill="red", width=0)
